@@ -27,9 +27,9 @@ export default{
                     "url": "#",
                     "tags": "Migranti",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "author": "Alessandro Puglia",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "29 Giugno 2022",
                     "type": "full",
                     "arrowIcon": false
@@ -40,9 +40,9 @@ export default{
                     "url": "#",
                     "tags": "Allarmi",
                     "tagsAdditionalClasses": "article__tags--light-blue",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "author": "Ugo Lombi",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "14 Luglio 2022",
                     "type": "854"
                 },
@@ -52,12 +52,12 @@ export default{
                     "url": "#",
                     "tags": "Esperimenti",
                     "tagsAdditionalClasses": "article__tags--light-blue",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "author": "Diletta Grella",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "14 Luglio 2022",
                     "type": "half-height",
-                    "urlAudio": "/src/assets/audio.wav"
+                    "urlAudio": "audio.wav"
                 },
                 {
                     "id": 4,
@@ -65,9 +65,9 @@ export default{
                     "url": "#",
                     "tags": "Ucraina",
                     "tagsAdditionalClasses": "article__tags--light-red",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "author": "Anna Spena",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "14 Luglio 2022",
                     "type": "half-height"
                 },
@@ -82,7 +82,7 @@ export default{
                     "background_image": '',
                     "background_color": "#E63036" ,
                     "author": "Redazione",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "12 Luglio 2022",
                     "type": "436 justify-content-start",
                     "classCol": "col-12 col-lg-4"
@@ -93,10 +93,10 @@ export default{
                     "url": "#",
                     "tags": "Adolescenti",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Luca Cereda",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "12 Luglio 2022",
                     "type": "436 justify-content-start",
                     "classCol": "col-12 col-lg-4"
@@ -107,10 +107,10 @@ export default{
                     "url": "#",
                     "tags": "Economia civile",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Emiliano Moccia",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "12 Luglio 2022",
                     "type": "436 justify-content-start",
                     "classCol": "col-12 col-lg-4"
@@ -121,10 +121,10 @@ export default{
                     "url": "#",
                     "tags": "Networkin",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Diletta Grella",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "7 Luglio 2022",
                     "type": "436 justify-content-start",
                     "classCol": "col-12 col-lg-4"
@@ -135,10 +135,10 @@ export default{
                     "url": "#",
                     "tags": "Società",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Anna Spena",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "7 Luglio 2022",
                     "type": "436 justify-content-start align-items-end article--half-width",
                     "classCol": "col-12 col-lg-8"
@@ -151,10 +151,10 @@ export default{
                     "url": "#",
                     "tags": "Impresa sociale",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Giovanni Gavardi",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "3 Luglio 2022",
                     "type": "558 justify-content-start align-items-end article--half-width",
                     "classCol": "col-12"
@@ -165,10 +165,10 @@ export default{
                     "url": "#",
                     "tags": "Sponsored",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Dynamo Academy",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "",
                     "type": "372 justify-content-start",
                     "classCol": "col-12 col-lg-3"
@@ -179,10 +179,10 @@ export default{
                     "url": "#",
                     "tags": "Persone",
                     "tagsAdditionalClasses": "article__tags--light-red",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Lucia Capuzzi",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "",
                     "type": "372 justify-content-start",
                     "classCol": "col-12 col-lg-3"
@@ -196,7 +196,7 @@ export default{
                     "background_image": "",
                     "background_color": "#E63036",
                     "author": "Diletta Grella",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "7 Luglio 2022",
                     "type": "372 justify-content-start",
                     "classCol": "col-12 col-lg-3"
@@ -207,10 +207,10 @@ export default{
                     "url": "#",
                     "tags": "Società civile",
                     "tagsAdditionalClasses": "article__tags--light-blue",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Francesco Palazzo",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "7 Luglio 2022",
                     "type": "372 justify-content-start",
                     "classCol": "col-12 col-lg-3"
@@ -223,10 +223,10 @@ export default{
                     "url": "#",
                     "tags": "Innovazione",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Luigi Alfonso",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "1 Luglio 2022",
                     "type": "186 justify-content-start",
                     "classCol": "col-sm-12"
@@ -237,10 +237,10 @@ export default{
                     "url": "#",
                     "tags": "Disabilità",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Sara Bellingeri",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "1 Luglio 2022",
                     "type": "186 justify-content-start",
                     "classCol": "col-sm-12"
@@ -251,10 +251,10 @@ export default{
                     "url": "#",
                     "tags": "Traiettorie",
                     "tagsAdditionalClasses": "article__tags--light-red",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Giampaolo Cerri",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "1 Luglio 2022",
                     "type": "186 justify-content-start",
                     "classCol": "col-sm-12"
@@ -265,10 +265,10 @@ export default{
                     "url": "#",
                     "tags": "Sociale",
                     "tagsAdditionalClasses": "",
-                    "background_image": "/src/assets/article-sample-image.png",
+                    "background_image": "article-sample-image.png",
                     "background_color": "",
                     "author": "Giovanni Gamba",
-                    "author_pic": "/src/assets/author-sample-pic.png",
+                    "author_pic": "author-sample-pic.png",
                     "date": "1 Luglio 2022",
                     "type": "186 justify-content-start",
                     "classCol": "col-sm-12"
@@ -280,7 +280,7 @@ export default{
                     "title": 'Il Becco delloca',
                     "url": "#",
                     "author": "Paolo Dell’Oca",
-                    "authorPic": '/src/assets/blog-author-sample-pic.png',
+                    "authorPic": 'blog-author-sample-pic.png',
                     "classCol": "col-6 col-md-2"
                 },
                 {
@@ -288,7 +288,7 @@ export default{
                     "title": 'Disarmato',
                     "url": "#",
                     "author": "Pasquale Pugliese",
-                    "authorPic": '/src/assets/blog-author-sample-pic.png',
+                    "authorPic": 'blog-author-sample-pic.png',
                     "classCol": "col-6 col-md-2"
                 },
                 {
@@ -296,7 +296,7 @@ export default{
                     "title": 'Battitiperminuto',
                     "url": "#",
                     "author": "Lorenzo Maria Alvaro",
-                    "authorPic": '/src/assets/blog-author-sample-pic.png',
+                    "authorPic": 'blog-author-sample-pic.png',
                     "classCol": "col-6 col-md-2"
                 },
                 {
@@ -304,7 +304,7 @@ export default{
                     "title": 'La Zanzarella',
                     "url": "#",
                     "author": "Elena Zanella",
-                    "authorPic": '/src/assets/blog-author-sample-pic.png',
+                    "authorPic": 'blog-author-sample-pic.png',
                     "classCol": "col-6 col-md-2"
                 },
                 {
@@ -312,7 +312,7 @@ export default{
                     "title": 'Impact Q&A',
                     "url": "#",
                     "author": "Laura Orestano",
-                    "authorPic": '/src/assets/blog-author-sample-pic.png',
+                    "authorPic": 'blog-author-sample-pic.png',
                     "classCol": "col-6 col-md-2"
                 }
             ]   
