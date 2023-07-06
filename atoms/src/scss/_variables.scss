@@ -1,0 +1,20 @@
+
+// colors palette
+$color-one: #010101;
+$color-two: #ffffff;
+$color-three: #000;
+$color-four: #FF2C33;
+$color-five: #F4F4F4;
+$color-six: #F4F1DE;
+$color-seven: #3C3C3C;
+$color-eight: #E63036;
+
+$grid-gutter-width: 0rem;
+$gutters: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);

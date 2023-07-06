@@ -1,0 +1,13 @@
+<footer class="footer">
+    <div v-if="links" 
+        class="footer__links">
+        <ul>
+            <li v-for="link in links">
+                <a :href="link.url" v-html="link.label"></a>
+            </li>
+        </ul>
+    </div>  
+    
+
+    <div class="footer__copyright">© 1994-2022 Vita Società Editoriale S.p.A.</div>
+</footer>

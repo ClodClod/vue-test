@@ -1,0 +1,45 @@
+@use "../../scss/style.scss" as base;
+
+.quote-section{
+    padding: 32px 20px;
+    background-color: orange;
+    display: flex;
+    position: relative;
+
+    &__quote{
+        @include base.pseudo-icon('before', 'quote', (color: base.$color-two, opacity: 0.5, margin-right: 20px, font-size: 54px));
+        position: absolute;
+        top: 30px;
+    }
+    
+    &__label{
+        font-size: 24px;
+        color: base.$color-two;
+        margin-left: 40px;
+    }
+
+    &__author{
+        @include base.choose-font('anybody');
+        font-size: 16px;
+        color: base.$color-two;
+        font-style: italic;
+    }
+}
+
+@include base.media-breakpoint-up(sm){
+    .quote-section{
+        padding: 84px 100px;
+
+        &__label{
+            @include base.heading-2();
+            line-height: 46px;
+            margin-left: 100px;
+        }
+
+        &__quote{
+            &:after{
+                font-size: 20px;
+            }
+        }
+    }
+}

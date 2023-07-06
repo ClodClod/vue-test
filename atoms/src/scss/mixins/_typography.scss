@@ -1,0 +1,101 @@
+@mixin text($font: 'anybody'){
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    @include choose-font($font);
+}
+
+@mixin heading-1($font: 'anybody'){
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    @include choose-font($font);
+
+    @include media-breakpoint-up(sm){
+        font-size: 51px;    
+    }
+}
+
+@mixin heading-2($font: 'anybody'){
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 54px;
+    @include choose-font($font);
+}
+
+@mixin heading-3($font: 'anybody'){
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    @include choose-font($font);
+}
+
+@mixin choose-font($font){
+    @if $font == 'anybody' {
+        @include anybody;
+    }
+    @if $font == 'raleway' {
+        @include raleway;
+    }
+}
+
+@mixin anybody(){
+    font-family: Anybody, cursive;
+}
+
+@mixin raleway(){
+    font-family: Raleway, sans-serif;
+}
+
+$icons: (
+        arrow: \e900,
+        search: \e901,
+        menu: \e902,
+        user: \e903,
+        close: \e904,
+        quote: \e905,
+        chevron: \e906
+);
+
+
+
+%icon-styles {
+    font-family: 'icon-font' !important;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  
+@mixin pseudo-icon($position: before, $icon: false, $styles: false) {
+
+    @if $position == both {
+        $position: 'before, &:after';
+    }
+    // Either a :before or :after pseudo-element, or both, defaulting to :before
+    &:#{$position} {
+        @if $icon {
+        // A particular icon has been specified
+        content: "#{map-get($icons, $icon)}";
+        }
+        @if $styles {
+        @each $properties, $value in $styles {
+            #{$properties}: $value;
+        }
+        }
+        // Include any extra rules supplied for the pseudo-element
+        @content;
+        @extend %icon-styles;
+    }
+}
+
+

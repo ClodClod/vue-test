@@ -1,0 +1,166 @@
+<Header />
+
+<main>
+    <div class="article__full-sticky">
+        <Article :title="this.stickyArticles[0].title" 
+                :backgroundImage="this.stickyArticles[0].background_image"
+                :tags="this.stickyArticles[0].tags"
+                :author="'di ' + this.stickyArticles[0].author"
+                :authorPic="this.stickyArticles[0].author_pic"
+                :date="this.stickyArticles[0].date" 
+                :type="this.stickyArticles[0].type"
+                :tagsAdditionalClasses="this.stickyArticles[0].tagsAdditionalClasses"
+                :arrowIcon="this.stickyArticles[0].arrowIcon"
+                :url="this.stickyArticles[0].url" />
+    </div>
+    
+    <div class="container-fluid g-0">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <Article :title="this.stickyArticles[1].title" 
+                :backgroundImage="this.stickyArticles[1].background_image"
+                :tags="this.stickyArticles[1].tags"
+                :author="'di ' + this.stickyArticles[1].author"
+                :authorPic="this.stickyArticles[1].author_pic"
+                :date="this.stickyArticles[1].date" 
+                :type="this.stickyArticles[1].type"
+                :tagsAdditionalClasses="this.stickyArticles[1].tagsAdditionalClasses"
+                :url="this.stickyArticles[1].url" />
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="row h-100">
+                    <div class="col-12">
+                        <Article :title="this.stickyArticles[2].title" 
+                            :backgroundImage="this.stickyArticles[2].background_image"
+                            :tags="this.stickyArticles[2].tags"
+                            :author="'di ' + this.stickyArticles[2].author"
+                            :authorPic="this.stickyArticles[2].author_pic"
+                            :date="this.stickyArticles[2].date" 
+                            :type="this.stickyArticles[2].type" 
+                            :tagsAdditionalClasses="this.stickyArticles[2].tagsAdditionalClasses"
+                            :url="this.stickyArticles[2].url"
+                            :urlAudio="this.stickyArticles[2].urlAudio" />
+                    </div>
+                    <div class="col-12">
+                        <Article :title="this.stickyArticles[3].title" 
+                        :backgroundImage="this.stickyArticles[3].background_image"
+                        :tags="this.stickyArticles[3].tags"
+                        :author="'di ' + this.stickyArticles[3].author"
+                        :authorPic="this.stickyArticles[3].author_pic"
+                        :date="this.stickyArticles[3].date" 
+                        :type="this.stickyArticles[3].type"
+                        :tagsAdditionalClasses="this.stickyArticles[3].tagsAdditionalClasses" 
+                        :url="this.stickyArticles[3].url"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <CtaSection />
+
+    <div class="container-fluid g-0">
+        <div class="row">
+            <template v-for="firstWallArticle in firstWallArticles">
+                <div :class="firstWallArticle.classCol">
+                    <Article :title="firstWallArticle.title" 
+                    :backgroundImage="firstWallArticle.background_image"
+                    :backgroundColor="firstWallArticle.background_color"
+                    :tags="firstWallArticle.tags"
+                    :author="'di ' + firstWallArticle.author"
+                    :authorPic="firstWallArticle.author_pic"
+                    :date="firstWallArticle.date" 
+                    :type="firstWallArticle.type"
+                    :tagsAdditionalClasses="firstWallArticle.tagsAdditionalClasses"
+                    :url="firstWallArticle.url" />
+                </div>
+                
+            </template>
+        </div>
+    </div>
+
+    <QuoteSection
+        :title="'Essere troppo seri non è cosa molto seria'"
+        :author="'[ Detto Africano ]'" />
+
+
+    <BlogAuthor  
+        v-if="blogAuthors"
+        :title="'Il Blog'">
+
+        <template v-slot:authors >
+            <template v-for="blogAuthor in blogAuthors">
+                <div :class="blogAuthor.classCol">
+                    <div class="blog-author__column">
+                        <div class="blog-author__picture">
+                            <img :src="getImageUrl(blogAuthor.authorPic)" alt="Author">
+                        </div>
+    
+                        <div class="blog-author__article-label" v-html="blogAuthor.title"></div>
+    
+                        <div class="blog-author__author-name" v-html="blogAuthor.author"></div>
+                    </div>
+                </div>
+            </template>
+            
+        </template>
+    </BlogAuthor>
+
+    <div class="container-fluid g-0">
+        <div class="row">
+            <template v-for="secondWallArticle in secondWallArticles">
+                <div :class="secondWallArticle.classCol">
+                    <Article :title="secondWallArticle.title" 
+                    :backgroundImage="secondWallArticle.background_image"
+                    :backgroundColor="secondWallArticle.background_color"
+                    :tags="secondWallArticle.tags"
+                    :author="'di ' + secondWallArticle.author"
+                    :authorPic="secondWallArticle.author_pic"
+                    :date="secondWallArticle.date" 
+                    :type="secondWallArticle.type"
+                    :tagsAdditionalClasses="secondWallArticle.tagsAdditionalClasses"
+                    :url="secondWallArticle.url" />
+                </div>
+                
+            </template>
+        </div>
+    </div>
+
+    <div class="container-fluid g-0">
+        <div class="row">
+            <div class="col-md-6">
+                <template v-for="thirdWallArticle in thirdWallArticles">
+                    <div :class="thirdWallArticle.classCol">
+                        <Article :title="thirdWallArticle.title" 
+                            :backgroundImage="thirdWallArticle.background_image"
+                            :backgroundColor="thirdWallArticle.background_color"
+                            :tags="thirdWallArticle.tags"
+                            :author="'di ' + thirdWallArticle.author"
+                            :authorPic="thirdWallArticle.author_pic"
+                            :date="thirdWallArticle.date" 
+                            :type="thirdWallArticle.type"
+                            :tagsAdditionalClasses="thirdWallArticle.tagsAdditionalClasses"
+                            :url="thirdWallArticle.url" />
+                    </div>
+                </template>
+            </div>
+
+            <div class="col-md-6">
+                <Article :title="thirdWallArticles[0].title" 
+                    :backgroundImage="thirdWallArticles[0].background_image"
+                    :backgroundColor="thirdWallArticles[0].background_color"
+                    :tags="thirdWallArticles[0].tags"
+                    :author="'di ' + thirdWallArticles[0].author"
+                    :authorPic="thirdWallArticles[0].author_pic"
+                    :date="thirdWallArticles[0].date" 
+                    type="full-height"
+                    :tagsAdditionalClasses="thirdWallArticles[0].tagsAdditionalClasses"
+                    :url="thirdWallArticles[0].url" />
+            </div>
+            
+        </div>
+    </div>
+</main>
+
+
+<Footer />

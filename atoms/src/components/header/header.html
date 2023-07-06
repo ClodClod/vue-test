@@ -1,0 +1,170 @@
+<header>
+    <div class="header__subscription">
+        <div>
+            <a href="#"  class="m-0">Contribuisci</a>
+            <a href="#">Abbonati</a>
+        </div>
+        <div>
+            <a href="#" class="m-0 header__icon-user">Accedi</a>
+        </div>
+    </div>
+
+    <div class="header__menu-search">
+        <div class="header__menu-button" 
+            :class="{ 'header__menu-button--close': megaMenu }"
+            @click="toggleMegamenu()"></div>
+        <div class="header__search-button"></div>
+    </div>
+
+    <div class="header__megamenu" v-if="megaMenu">
+        <div class="container-fluid g-0">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="header__megamenu-box">
+                        <div class="header__megamenu-box-title">
+                            Articoli
+                        </div>
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Trend, dati e novità del Terzo Settore.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="header__megamenu-box">
+                        <div class="header__megamenu-box-title">
+                            Storie
+                        </div>
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Letture ed approfondimenti dei fenomeni complessi.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="header__megamenu-box">
+                        <div class="header__megamenu-box-title">
+                            Interviste
+                        </div>
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Racconti reali di persone ed organizzazioni.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="header__megamenu-box">
+                        <div class="header__megamenu-box-title">
+                            Opinioni
+                        </div>
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Riflessioni e confronti dei nostri opinionisti.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="header__megamenu-box">
+                        <div class="header__megamenu-box-title">
+                            Podcast
+                        </div>
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Un luogo per dare voce ai protagonisti della sostenibilità.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="header__megamenu-box">
+                        <div class="header__megamenu-box-title">
+                            Bookazine
+                        </div>
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Una rivista da leggere e un libro da conservare.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="header__megamenu-box header__megamenu-box--small">
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Chi siamo
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="header__megamenu-box header__megamenu-box--small">
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Comitato editoriale
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="header__megamenu-box header__megamenu-box--small">
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Servizi
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="header__megamenu-box header__megamenu-box--small">
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Agenda / Eventi
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="header__megamenu-box header__megamenu-box--small">
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Mappa dell’attivismo
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="header__megamenu-box header__megamenu-box--small">
+                        <div class="header__megamenu-box-title header__megamenu-box-title--small">
+                            Inchieste crowdfunding
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header__menu d-none d-lg-flex">
+        <nav role="navigation">
+            <ul>
+                <li class="selected"><a href="#">Tutti i temi</a></li>
+                <li v-for="topic in topics">
+                    <a :href="topic.url">{{ topic.label }}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header__topics">
+        <div class="header__topic-label">
+            <h1>Tutti i temi</h1>
+
+            <i class="header__dropdown-arrow d-sm-none" 
+                @click="toggleMenu()"
+                :class="{ 'header__dropdown-arrow--open': menu }"></i>
+        </div>
+
+        <nav class="d-sm-none header__dropdown" role="navigation" v-if="menu">
+            <ul>
+                <li class="selected"><a href="#">Tutti i temi</a></li>
+                <li v-for="topic in topics">
+                    <a :href="topic.url">{{ topic.label }}</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header__topics-wrapper">
+            <template v-for="topic in topics">
+                <a :href="topic.url" 
+                   class="header__topic-item"
+                   :class="topic.additionalClasses">{{ topic.label }}</a>
+            </template>
+        
+        </div>
+    </div>
+</header>

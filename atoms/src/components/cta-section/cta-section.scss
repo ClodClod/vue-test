@@ -1,0 +1,32 @@
+@use "../../scss/style.scss" as base;
+
+.cta-section{
+    background-color: base.$color-six;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        @include base.heading-2();
+        color: base.$color-one;
+    }
+
+    &__cta{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: base.$color-one;
+        @include base.text();
+
+        @include base.pseudo-icon('after', 'arrow', (margin-left: 4px, font-size: 24px, color: base.$color-one));
+    }
+}
+
+@include base.media-breakpoint-up(md){
+    .cta-section{
+        padding: 84px 40px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

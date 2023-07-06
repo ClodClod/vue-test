@@ -1,0 +1,43 @@
+<article :style="{ 'background-image': 'url(' + getImageUrl(backgroundImage) + ')', 'background-color': backgroundColor }" 
+    class="article"
+    :class="getClass">
+
+    <div class="article__wrapper">
+        <div v-if="tags" 
+            v-html="tags"
+            class="article__tags"
+            :class="tagsAdditionalClasses"></div>
+        
+        <a :href="url" class="article__url">
+            <div class="article__title">
+                <h2 v-if="title" v-html="title"></h2>
+            </div>
+            
+
+            <div class="article__meta">
+                <div class="article__wrapper-meta">
+                    <div class="article__author-pic">
+                        <img :src="getImageUrl(authorPic)" alt="Author">
+                    </div>
+                    
+                    <div class="article__further-info">
+                        <div class="article__author-name">{{ author }}</div>
+                        <div class="article__author-date">{{ date }}</div>
+                    </div>
+        
+                </div>
+                
+                <div v-if="arrowIcon && reduced">
+                    <span class="article__author-arrow d-none d-sm-block"></span>
+                </div>
+            </div>
+        
+            <div v-if="arrowIcon && !reduced" 
+                class="article__author-arrow-wrapper d-none d-sm-block">
+                <span class="article__author-arrow"></span>
+            </div>
+        </a>
+    </div>
+    
+    
+</article>

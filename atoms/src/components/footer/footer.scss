@@ -1,0 +1,62 @@
+@use "../../scss/style.scss" as base;
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 32px 16px;
+    border-top: 1px solid base.$color-three;
+
+    &__links{
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: block;
+
+            li{
+                margin-bottom: 16px;
+
+                a{
+                    text-decoration: none;
+                    @include base.text();
+                    color: base.$color-three;
+                    line-height: 24px;
+                    font-weight: 700;
+                }
+
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__copyright{
+        @include base.text();
+        color: base.$color-three;
+        line-height: 24px;
+    }
+}
+
+@include base.media-breakpoint-up(sm){
+    .footer{
+        flex-direction: row;
+        padding: 48px 40px;
+        border-top: none;
+
+        &__links{
+            ul{
+                display: flex;
+                li{
+                    margin-right: 24px;
+
+                    a{
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}
